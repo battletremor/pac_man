@@ -9,7 +9,7 @@ import 'dart:async';
 
 void main() async{
   Util flameUtil = Util();
-  Util
+  Util flameUtil = flameUtil.fullScreen();
 
 }
 
