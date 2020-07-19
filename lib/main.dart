@@ -6,11 +6,20 @@ import 'package:flutter/services.dart';
 import 'package:flame/game.dart';
 import 'dart:async';
 
+import 'Game.dart';
+
 
 void main() async{
   Util flameUtil = Util();
-  Util flameUtil = flameUtil.fullScreen();
+  await flameUtil.fullScreen();
+  await flameUtil.setOrientation(DeviceOrientation.landscapeLeft);
+
+  PacGame game = PacGame();
+  runApp(game.widget);
+  
 
 }
+
+c
 
 
