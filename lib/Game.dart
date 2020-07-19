@@ -1,10 +1,14 @@
 import 'dart:ui';
-
+import 'package:flutter/gestures.dart';
 import 'package:flame/game.dart';
 
 class PacGame extends Game {
 
   Size screenSize;
+  bool hasWon = false;
+  void onTapDown(TapDownDetails d) {
+    // handle taps here ,but we can also use gyroscope which i dont know abt ..
+  }
 
   void resize(Size size) {
     screenSize = size;

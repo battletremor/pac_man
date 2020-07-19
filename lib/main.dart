@@ -5,7 +5,7 @@ import 'package:flame/util.dart';
 import 'package:flutter/services.dart';
 import 'package:flame/game.dart';
 import 'dart:async';
-
+import 'package:flutter/gestures.dart';
 import 'Game.dart';
 
 
@@ -15,7 +15,10 @@ void main() async{
   await flameUtil.setOrientation(DeviceOrientation.landscapeLeft);
 
   PacGame game = PacGame();
+  TapGestureRecognizer tapper = TapGestureRecognizer();
+  tapper.onTapDown = game.onTapDown;
   runApp(game.widget);
+  flameUtil.addGestureRecognizer(tapper);
   
 
 }
