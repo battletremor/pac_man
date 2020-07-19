@@ -18,6 +18,7 @@ void main() async{
   TapGestureRecognizer tapper = TapGestureRecognizer();
   tapper.onTapDown = game.onTapDown;
   runApp(game.widget);
+  // ignore: deprecated_member_use
   flameUtil.addGestureRecognizer(tapper);
   
 
